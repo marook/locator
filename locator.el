@@ -16,6 +16,8 @@
 ;; You should have received a copy of the GNU Affero General Public License
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+(require 'helm)
+
 (defcustom locator-key-display-length 30
   "locator-key-display-length specifies the number of characters
   the translate entry keys should occupy on the screen in the
