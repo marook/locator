@@ -42,6 +42,7 @@
      :action
      '(
        ("Goto" . locator-goto-entry-key)
+       ("Insert key" . locator-insert-key)
        )
      )))
 
@@ -175,5 +176,12 @@
   (seq-let (file-path lang-key lang-value key-point) (car candidates)
     (find-file file-path)
     (goto-char key-point)))
+
+(defun locator-insert-key (candidates)
+  (mapc
+   (lambda (candidate)
+     (seq-let (file-path lang-key lang-value key-point) candidate
+       (insert lang-key)))
+   candidates))
 
 (provide 'locator)
