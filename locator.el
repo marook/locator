@@ -30,7 +30,6 @@
      :candidates
      (lambda ()
        (locator--collect-lang-entries locale))
-     :volatile t
      :candidate-transformer
      (lambda (candidates)
        (mapcar
