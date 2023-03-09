@@ -149,6 +149,7 @@
               )
              ((eq (char-after) ?\")
               (setq entries (append entries `((,(string-join key-artifacts ".") ,current-string-value ,current-key-start-point))))
+              (setq key-artifacts (butlast key-artifacts))
               (setq state 'in-obj)
               )
              ('t (setq current-string-value (format-message "%s%c" current-string-value (char-after))))
