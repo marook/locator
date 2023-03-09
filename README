@@ -1,0 +1,36 @@
+locator - an i18n files lookup tool
+
+1) Introduction
+2) Requirements
+3) Usage
+4) License
+
+
+------------------------------------------------------------------------
+Introduction
+
+locator is an emacs module for looking up keys or values in JSON i18n
+files as they are commonly used in angular and other web projects.
+
+
+------------------------------------------------------------------------
+Requirements
+
+You need the following in order to use locator:
+
+- emacs of course
+- helm
+
+
+------------------------------------------------------------------------
+Usage
+
+`M-x locator-find-entry` will ask you for the locale in which you want
+to find entries. If your files are named de.json or de-DE.json you can
+type 'de' here.
+
+
+------------------------------------------------------------------------
+License
+
+See file COPYING.

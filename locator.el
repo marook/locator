@@ -1,6 +1,6 @@
 ;; -*- lexical-binding: t -*-
 ;;
-;; locator - a i18n files lookup tool
+;; locator - an i18n files lookup tool
 ;; Copyright (C) 2023  Markus Peröbner
 ;;
 ;; This program is free software: you can redistribute it and/or modify
