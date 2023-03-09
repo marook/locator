@@ -18,7 +18,7 @@
 
 (require 'helm)
 
-(defcustom locator-key-display-length 30
+(defcustom locator-key-display-length 40
   "locator-key-display-length specifies the number of characters
   the translate entry keys should occupy on the screen in the
   entry find.")
