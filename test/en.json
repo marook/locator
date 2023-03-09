@@ -1,0 +1,6 @@
+{
+    "a-group": {
+        "with-a-key": "some value",
+        "following-key": "with \"another\" value"
+    }
+}
