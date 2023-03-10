@@ -21,7 +21,30 @@
 (defcustom locator-key-display-length 40
   "locator-key-display-length specifies the number of characters
   the translate entry keys should occupy on the screen in the
-  entry find.")
+  entry find."
+  :type 'integer
+  :group 'locator)
+
+(defcustom locator-key-join-separator "."
+  "locator-key-join-separator defines a string used to join the
+key artifacts from a lang json file into a composite key."
+  :type 'string
+  :group 'locator)
+
+(defcustom locator-key-builder 'locator-join-key
+  "locator-key-builder is a function for generating composite
+keys from keys in the long json files.
+
+The function is called with the follwing arguments. The first
+argument key-artifacts is a list of keys from the json file which
+point the current entry.
+
+The second argument lang-file-path is the path of the lang json
+file.
+
+The function must return the lang entrie's global key as string."
+  :type 'function
+  :group 'locator)
 
 ;;;###autoload
 (defun locator-find-entry (locale)
@@ -148,7 +171,10 @@
               (setq state 'in-string-value-escape)
               )
              ((eq (char-after) ?\")
-              (setq entries (append entries `((,(string-join key-artifacts ".") ,current-string-value ,current-key-start-point))))
+              (setq entries
+                    (append
+                     entries
+                     `((,(funcall locator-key-builder key-artifacts file-path) ,current-string-value ,current-key-start-point))))
               (setq key-artifacts (butlast key-artifacts))
               (setq state 'in-obj)
               )
@@ -184,5 +210,8 @@
      (seq-let (file-path lang-key lang-value key-point) candidate
        (insert lang-key)))
    candidates))
+
+(defun locator-join-key (key-artifacts lang-file-path)
+  (string-join key-artifacts locator-key-join-separator))
 
 (provide 'locator)
