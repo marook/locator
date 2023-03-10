@@ -12,6 +12,9 @@ Introduction
 locator is an emacs module for looking up keys or values in JSON i18n
 files as they are commonly used in angular and other web projects.
 
+The images in the screenshots directory show how it will look within
+emacs.
+
 
 ------------------------------------------------------------------------
 Requirements
