@@ -3,7 +3,8 @@ locator - an i18n files lookup tool
 1) Introduction
 2) Requirements
 3) Usage
-4) License
+4) Custom Localization Keys
+5) License
 
 
 ------------------------------------------------------------------------
@@ -31,6 +32,25 @@ Usage
 `M-x locator-find-entry` will ask you for the locale in which you want
 to find entries. If your files are named de.json or de-DE.json you can
 type 'de' here.
+
+
+------------------------------------------------------------------------
+Custom Localization Keys
+
+By default the keys for the localization entries are the joined keys
+from the lang json files. So given the following lang json example:
+
+{
+  "a": {
+    "b": "a label"
+  }
+}
+
+The default localization entry key constructed for "a label" is "a.b".
+
+This behavior can be customized by exchanging the locator-key-builder
+variable with your own function. See the locator-key-builder
+documentation for more details.
 
 
 ------------------------------------------------------------------------
