@@ -25,6 +25,9 @@ You need the following in order to use locator:
 - emacs of course
 - helm
 
+Some esoteric projects may have more than one root directory. Some
+parts of locator won't work with such projects.
+
 
 ------------------------------------------------------------------------
 Usage

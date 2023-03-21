@@ -1,0 +1,3 @@
+* replace append with add-to-list in locator.el
+because the parser just extends the existing data structures. i guess
+append is copying the lists but i think there is no need to.
