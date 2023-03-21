@@ -1,3 +1,11 @@
 * replace append with add-to-list in locator.el
 because the parser just extends the existing data structures. i guess
 append is copying the lists but i think there is no need to.
+* declare primary language and translate others
+primary language should be asked first. default value for other
+languages should be translated via trans application:
+
+#+BEGIN_SRC
+$ trans -b -s de -t en 'Hallo'
+Hello
+#+END_SRC
