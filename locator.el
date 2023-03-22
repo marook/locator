@@ -17,6 +17,7 @@
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 (require 'helm)
+(require 'project)
 
 (defcustom locator-key-display-length 40
   "locator-key-display-length specifies the number of characters
