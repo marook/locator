@@ -18,6 +18,7 @@
 
 (require 'helm)
 (require 'project)
+(require 's)
 
 (defcustom locator-key-display-length 40
   "locator-key-display-length specifies the number of characters
